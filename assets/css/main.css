@@ -1,3 +1,42 @@
+@charset "UTF-8";
+.primary_light {
+  color: #0ACCB2 !important;
+}
+
+.primary_dark_blue {
+  color: #001954 !important;
+}
+
+.dark_bg {
+  background-color: #252728;
+  color: white;
+}
+
+.light_bg {
+  background-color: #3A3C3D;
+  color: white;
+}
+
+.dark_blue_bg {
+  background-color: #001954;
+  color: white;
+}
+
+.blue_btn {
+  background-color: #008AE6 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.blue_btn:hover {
+  color: #008AE6 !important;
+  background-color: white !important;
+}
+
+.o-06 {
+  opacity: 0.6;
+}
+
 @font-face {
   font-family: 'Verlag_Book';
   src: url("../fonts/verlag-book.otf") format("opentype");
@@ -27,6 +66,22 @@ body {
   font-family: 'Verlag_Book', sans-serif;
 }
 
+.italic {
+  font-family: 'Verlag_Book_Italic', sans-serif;
+}
+
+.bold {
+  font-family: 'Verlag_Bold', sans-serif;
+}
+
+.bold_italic {
+  font-family: 'Verlag_Bold_Italic', sans-serif;
+}
+
+.black {
+  font-family: 'Verlag_Black', sans-serif;
+}
+
 .navbar {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -34,6 +89,7 @@ body {
 
 .navbar .nav-link {
   color: #fff;
+  font-size: 16px;
 }
 
 .navbar .nav-link:hover,
@@ -48,39 +104,459 @@ body {
 
 /* Change navbar styling on scroll */
 .navbar.active {
-  background: #fff;
+  background: #001954 !important;
   -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.active .nav-link {
-  color: #555;
-}
-
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
-  color: #555;
+  color: #fff;
   text-decoration: none;
 }
 
 .navbar.active .navbar-brand {
-  color: #555;
+  color: #fff;
 }
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
   .navbar {
-    background: #fff;
+    background: #001954;
+  }
+  .navbar .container-fluid {
+    padding: 0 0 0 1rem !important;
+  }
+  .navbar-nav {
+    padding: 1rem 0 1rem 0;
   }
   .navbar .navbar-brand,
   .navbar .nav-link {
-    color: #555;
+    color: #fff;
+  }
+  .social {
+    margin: 1rem 0 0 0 !important;
   }
 }
 
-body {
-  min-height: 110vh;
-  background-color: #4ca1af;
-  background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+/*  ============================= CLASSES GLOBALES =============================  */
+body,
+* {
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card {
+  -webkit-box-shadow: 0px 12px 36px #0000005C;
+          box-shadow: 0px 12px 36px #0000005C;
+}
+
+.card a {
+  color: #008AE6;
+}
+
+.card svg {
+  fill: #008AE6;
+  height: 10px;
+  width: 10px;
+}
+
+/*  ----------------------------- underline text -----------------------------  */
+.underline {
+  background: -webkit-gradient(linear, left top, right top, from(#0ACCB2), to(#0ACCB2)) no-repeat;
+  background: linear-gradient(to right, #0ACCB2, #0ACCB2) no-repeat;
+  background-size: 100% 25%;
+  background-position: left bottom;
+}
+
+/*  ----------------------------- button half rounded corners -----------------------------  */
+.btn-custom {
+  padding: 7px 35px;
+  border: 3px white solid;
+  border-radius: 15px 2px 15px 2px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn-custom:hover {
+  background-color: white;
+  color: #0ACCB2;
+}
+
+/*  ============================= SECTION N°1 : About the ecosystem =============================  */
+.about {
+  position: relative;
+  background-color: #252728;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about img {
+  width: 300px;
+}
+
+.about video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #032D93;
+  opacity: 0.95;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/*  ============================= SECTION N°2 : Your startup journey =============================  */
+section.journey {
+  background: transparent linear-gradient(141deg, #008AE5 0%, #032D93 100%) 0% 0% no-repeat padding-box;
+  padding: 10% 15%;
+  z-index: 2;
+}
+
+section.journey .cards {
+  position: relative;
+  top: -140px;
+  z-index: 3;
+}
+
+section.journey .cards .card {
+  width: 30vw;
+  height: 200px;
+}
+
+section.journey .cards .card a > svg {
+  fill: #0ACCB2;
+  height: 10px;
+  width: 10px;
+}
+
+section.journey .cards-after {
+  margin-top: -140px;
+}
+
+section.journey .cards .more-news {
+  position: absolute;
+  right: -5vw;
+  bottom: 20px;
+}
+
+.cards-after .carousel {
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cards-after .carousel .nav-links .nav-link {
+  margin-top: 3rem;
+}
+
+.cards-after .carousel .nav-links .nav-link.active .text p:last-child {
+  background: -webkit-gradient(linear, left top, right top, from(#0ACCB2), to(#0ACCB2)) no-repeat;
+  background: linear-gradient(to right, #0ACCB2, #0ACCB2) no-repeat;
+  background-size: 100% 25%;
+  background-position: left bottom;
+}
+
+.cards-after .carousel .nav-links .nav-link .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  color: white;
+  background-color: #0ACCB2;
+  width: 50px;
+  height: 50px;
+  margin: -10px -5px 0 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.cards-after .carousel .nav-links .nav-link .text {
+  z-index: 2;
+  line-height: 1;
+}
+
+.cards-after .carousel .nav-links .nav-link .text p:first-child {
+  font-size: 42px;
+}
+
+.cards-after .carousel .nav-links .nav-link .text p:last-child {
+  font-size: 26px;
+}
+
+.cards-after .carousel .slides {
+  opacity: 0;
+  position: relative;
+}
+
+.cards-after .carousel .slides.active {
+  opacity: 1;
+}
+
+.cards-after .carousel .slides .img {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+}
+
+.cards-after .carousel .slides .img img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 26px #00000029;
+          box-shadow: 0px 3px 26px #00000029;
+}
+
+/*
+.carousel {
+    position: relative;
+    display: flex;
+
+    .slides {
+        position: relative;
+        top: -4em;
+        left: 10em;
+
+        img {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            opacity: 0;
+            z-index: 9999;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0 0 0 6em;
+        list-style-type: none;
+
+        .nav-link {
+            font-size: 2rem;
+            font-family: Lora, serif;
+            line-height: 2;
+            text-decoration: none;
+            color: #7f8c8d;
+            transition: 0.3s;
+
+            &:hover {
+                color: #1c1e1f;
+            }
+
+            &.active {
+                color: black;
+                pointer-events: none;
+            }
+        }
+    }
+}
+*/
+/*  ============================= SECTION N°3 : The ecosystem at a glance =============================  */
+.wrap-bg {
+  position: absolute;
+  top: 200%;
+  max-width: 100vw;
+}
+
+.wrap-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+}
+
+.ecosystem .subtitle {
+  font-size: 30px;
+}
+
+.ecosystem .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 350px;
+  margin: 1rem 0;
+}
+
+.ecosystem .col .d-flex:last-child {
+  font-size: 1.5rem;
+}
+
+.ecosystem .col .counter::after {
+  color: #F3F3F3;
+  content: attr(data-bg-text);
+  display: block;
+  font-size: 350px;
+  line-height: 1;
+  z-index: -1;
+  position: absolute;
+  top: -30px;
+  left: -50px;
+}
+
+.ecosystem .col .counter.left::after {
+  color: #F3F3F3;
+  content: attr(data-bg-text);
+  display: block;
+  font-size: 350px;
+  line-height: 1;
+  z-index: -1;
+  position: absolute;
+  top: -30px;
+  left: 100px;
+}
+
+.ecosystem img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 26px #00000029;
+          box-shadow: 0px 3px 26px #00000029;
+  border-radius: 4px;
+}
+
+/*  ============================= SECTION N°4 : News & insight =============================  */
+.news {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.news .container {
+  position: relative;
+  z-index: 2;
+}
+
+.news .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(125deg, #008AE5 0%, #032D93 100%) 0% 0% no-repeat padding-box;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+i {
+  color: #ffc371;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control::-ms-input-placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer .social svg {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
 }
 /*# sourceMappingURL=main.css.map */

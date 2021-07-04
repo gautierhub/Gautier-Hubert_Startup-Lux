@@ -1,0 +1,372 @@
+/*  ============================= CLASSES GLOBALES =============================  */
+
+body,
+* {
+    scroll-behavior: smooth;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.card {
+    box-shadow: 0px 12px 36px #0000005C;
+    & a {
+        color: $primary_blue;
+    }
+
+    & svg {
+        fill: $primary_blue;
+        height: 10px;
+        width: 10px;
+    }
+}
+
+/*  ----------------------------- underline text -----------------------------  */
+
+.underline {
+    background: linear-gradient(to right, $primary_light, $primary_light) no-repeat;
+    background-size: 100% 25%;
+    background-position: left bottom;
+}
+
+/*  ----------------------------- button half rounded corners -----------------------------  */
+
+.btn-custom {
+    padding: 7px 35px;
+    border: 3px white solid;
+    border-radius: 15px 2px 15px 2px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    transition: 0.2s ease all;
+    width: fit-content;
+
+    &:hover {
+        background-color: white;
+        color: #0ACCB2;
+    }
+}
+
+/*  ============================= SECTION N°1 : About the ecosystem =============================  */
+
+.about {
+    position: relative;
+    background-color: $dark_bg;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    & img {
+        width: 300px;
+    }
+
+    & video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    & .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #032D93;
+        opacity: 0.95;
+        mix-blend-mode: multiply;
+        z-index: 1;
+    }
+}
+
+/*  ============================= SECTION N°2 : Your startup journey =============================  */
+
+section.journey {
+    background: transparent linear-gradient(141deg, #008AE5 0%, #032D93 100%) 0% 0% no-repeat padding-box;
+    padding: 10% 15%;
+    z-index: 2;
+
+    & .cards {
+        position: relative;
+        top: -140px;
+        z-index: 3;
+
+        & .card {
+            width: 30vw;
+            height: 200px;
+
+            & a>svg {
+                fill: $primary_light;
+                height: 10px;
+                width: 10px;
+            }
+        }
+
+        &-after {
+            margin-top: -140px;
+        }
+
+        .more-news {
+            position: absolute;
+            right: -5vw;
+            bottom: 20px;
+        }
+    }
+}
+
+
+.cards-after {
+    .carousel {
+        color: white;
+        position: relative;
+        display: flex;
+
+        & .nav-links {
+            & .nav-link {
+                margin-top: 3rem;
+
+                &.active {
+                    & .text p:last-child {
+                        background: linear-gradient(to right, $primary_light, $primary_light) no-repeat;
+                        background-size: 100% 25%;
+                        background-position: left bottom;
+                    }
+                }
+
+                & .number {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    color: white;
+                    background-color: $primary_light;
+                    width: 50px;
+                    height: 50px;
+                    margin: -10px -5px 0 0;
+                    border-radius: 50%;
+                    z-index: 2;
+                }
+
+                & .text {
+                    z-index: 2;
+                    line-height: 1;
+
+                    & p:first-child {
+                        font-size: 42px;
+                    }
+
+                    & p:last-child {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .slides {
+            opacity: 0;
+            position: relative;
+
+            &.active {
+                opacity: 1;
+            }
+
+            & .img {
+                position: relative;
+                height: 250px;
+                width: 250px;
+                overflow: hidden;
+
+                & img {
+                    position: absolute;
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    box-shadow: 0px 3px 26px #00000029;
+                }
+            }
+        }
+    }
+}
+
+/*
+.carousel {
+    position: relative;
+    display: flex;
+
+    .slides {
+        position: relative;
+        top: -4em;
+        left: 10em;
+
+        img {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            opacity: 0;
+            z-index: 9999;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0 0 0 6em;
+        list-style-type: none;
+
+        .nav-link {
+            font-size: 2rem;
+            font-family: Lora, serif;
+            line-height: 2;
+            text-decoration: none;
+            color: #7f8c8d;
+            transition: 0.3s;
+
+            &:hover {
+                color: #1c1e1f;
+            }
+
+            &.active {
+                color: black;
+                pointer-events: none;
+            }
+        }
+    }
+}
+*/
+
+/*  ============================= SECTION N°3 : The ecosystem at a glance =============================  */
+
+.wrap-bg {
+    position: absolute;
+    top: 200%;
+    max-width: 100vw;
+
+    & img {
+        object-fit: cover;
+        max-height: 100%;
+        width: 100%;
+    }
+}
+
+.ecosystem {
+    & .subtitle {
+        font-size: 30px;
+    }
+
+    & .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 350px;
+        margin: 1rem 0;
+
+        & .d-flex:last-child{
+            font-size: 1.5rem;
+        }
+
+        & .counter::after {
+            color: $secondary_gray;
+            content: attr(data-bg-text);
+            display: block;
+            font-size: 350px;
+            line-height: 1;
+            z-index: -1;
+            position: absolute;
+            top: -30px;
+            left: -50px;
+        }
+
+        & .counter.left::after {
+            color: $secondary_gray;
+            content: attr(data-bg-text);
+            display: block;
+            font-size: 350px;
+            line-height: 1;
+            z-index: -1;
+            position: absolute;
+            top: -30px;
+            left: 100px;
+        }
+
+    }
+
+    & img {
+        object-fit: cover;
+        max-height: 100%;
+        width: 100%;
+        box-shadow: 0px 3px 26px #00000029;
+        border-radius: 4px;
+    }
+}
+
+/*  ============================= SECTION N°4 : News & insight =============================  */
+
+.news {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    & .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(125deg, #008AE5 0%, #032D93 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.8;
+        mix-blend-mode: normal;
+        z-index: 1;
+    }
+}

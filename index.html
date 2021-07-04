@@ -4,21 +4,708 @@
     <title>Startup Luxembourg</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon//favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon//favicon-16x16.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon//favicon-16x16.png"
+    />
     <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    
-    <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This is some text.</p>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top py-2">
+        <div class="container-fluid mx-auto px-5">
+          <a href="#" class="navbar-brand text-uppercase">
+            <img
+              src="./assets/img/logo-white.png"
+              alt="Logo Startup Luxembourg"
+            />
+          </a>
+          <button
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+            </svg>
+          </button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link text-uppercase">Startup Journey</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-uppercase"
+                  >Our Startup Ecosystem</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-uppercase"
+                  >Dedicated Programmes & Events</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-uppercase">About</a>
+              </li>
+              <div class="social d-flex flex-nowrap ml-5">
+                <a href="#" class="mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+                    />
+                  </svg>
+                </a>
+
+                <a href="#" class="mr-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                    />
+                  </svg>
+                </a>
+
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path
+                      d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about">
+        <div class="overlay"></div>
+        <video
+          playsinline="playsinline"
+          autoplay="autoplay"
+          muted="muted"
+          loop="loop"
+        >
+          <source
+            src="./assets/video/istockphoto-1155767090-640_adpp_is.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="container h-100">
+          <div
+            class="
+              d-flex
+              flex-column
+              h-100
+              text-center
+              justify-content-center
+              align-items-center
+            "
+          >
+            <div class="w-100 text-white">
+              <img
+                src="./assets/img/logo-white.png"
+                alt="Logo Startup Luxembourg"
+              />
+              <h1 class="display-5 my-4">
+                <span class="underline">Grow from the heart of Europe</span>
+              </h1>
+              <p class="font-weight-light w-75 mx-auto my-4 pb-5">
+                Startup Luxembourg is a public initiative supported by the
+                entire Luxembourg start-up ecosystem. Its aim is to provide
+                everything you need to find your way around a booming innovative
+                environment.
+              </p>
+            </div>
+            <a href="#journey">
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="white"
+                transform="scale(1.5)"
+              >
+                <path
+                  d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"
+                /></svg></a>
+          </div>
+        </div>
+      </section>
+
+        <section class="journey container-fluid py-5" id="journey">
+          <div class="cards d-flex justify-content-center align-items-end mb-5">
+            <div class="card d-flex dark_blue_bg p-4">
+              <p class="bold mb-0">
+                How to optimise your online application process for ICT or Space
+              </p>
+              <p class="text-muted">23 jan. 2020</p>
+              <div class="d-flex h-100 align-items-end">
+              <a href="#" class="primary_light"
+                >Read more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                  /></svg></a>
+                </div>
+            </div>
+
+            <div class="card dark_blue_bg p-4 ml-5">
+              <p class="bold mb-0">
+                Fit 4 Start spring 2020 - Applications are now open!
+              </p>
+              <p class="text-muted mb-5">9 jan. 2020</p>
+              <div class="d-flex h-100 align-items-end">
+              <a href="#" class="primary_light"
+                >Read more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                  /></svg></a>
+            </div>
+            </div>
+
+            <div class="more-news">
+              <a href="#" class="primary_light">
+                More news
+                <svg
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  fill="#0ACCB2"
+                  transform="rotate(270)"
+                >
+                  <path
+                    d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="cards-after">
+            <h2
+              class="primary_dark_blue o-06 bold text-uppercase display-4 mb-0"
+            >
+              Where does
+            </h2>
+            <h2 class="primary_dark_blue o-06 bold text-uppercase display-3">
+              your business stand ?
+            </h2>
+            <div class="d-flex carousel justify-content-between align-items-center">
+              <div class="nav-links d-flex flex-column">
+                <div class="nav-link d-flex">
+                  <p class="number bold">1</p>
+                  <div class="text d-flex flex-column">
+                    <p class="text-title bold text-uppercase">
+                      Idea
+                    </p>
+                    <p class="text-desc">I want to get started</p>
+                  </div>
+                </div>
+                <div class="nav-link d-flex">
+                  <p class="number bold">2</p>
+                  <div class="text d-flex flex-column">
+                    <p class="text-title bold text-uppercase">
+                      Start up
+                    </p>
+                    <p class="text-desc">
+                      I am looking for a test market
+                    </p>
+                  </div>
+                </div>
+                <div class="nav-link d-flex">
+                  <p class="number bold">3</p>
+                  <div class="text d-flex flex-column">
+                    <p class="text-title bold text-uppercase">
+                      Scale up
+                    </p>
+                    <p class="text-desc">
+                      I want to expand to Europe
+                    </p>
+                  </div>
+                </div>
+                <div class="nav-link d-flex">
+                  <p class="number bold">4</p>
+                  <div class="text d-flex flex-column">
+                    <p class="text-title bold text-uppercase">
+                      Invest
+                    </p>
+                    <p class="text-desc">
+                      I want to invest into start-ups
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="
+                  slides
+                  w-50
+                  d-flex
+                  flex-column
+                  align-items-center
+                "
+              >
+                <h3 class="mb-5">Lorem ipsum dolor sit amet</h3>
+                <div class="d-flex w-100 justify-content-center">
+                  <div class="img mr-5">
+                    <img src="/assets/img/13.jpg" alt="" />
+                  </div>
+                  <div class="img">
+                    <img src="/assets/img/20.jpg" alt="" />
+                  </div>
+                </div>
+                <p class="my-5 text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  vitae mi nunc. Interdum et malesuada fames ac ante ipsum
+                  primis in faucibus. Phasellus varius mauris nec nisi sagittis,
+                  a porttitor nisi tincidunt.
+                </p>
+                <button class="btn-custom text-uppercase mt-3">
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="wrap-bg">
+          <img src="/assets/img/nation-branding-up.png" alt="">
+          <img src="/assets/img/nation-branding-down.png" alt="">
+        </div>
+
+        <section class="ecosystem container-fluid px-0 py-5 mb-5">
+          <div class="d-flex flex-column align-items-center mt-2 mb-5">
+            <h2 class="display-4 bold">
+              <span class="underline">Luxembourg</span>
+            </h2>
+            <p class="subtitle">A vibrant and active ecosystem for start-ups</p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/img/10.jpg" />
+            </div>
+            <div class="col align-items-start">
+              <div class="d-flex flex-column align-items-center pl-5 ml-5">
+                <p class="counter bold display-4 mb-0" data-bg-text="2500+">2500+</p>
+                <p>Participants in each edition</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col align-items-end">
+              <div class="d-flex flex-column align-items-center pr-5 mr-5">
+                <p class="counter left bold display-4 mb-0" data-bg-text="60+">60+</p>
+                <p>Countries represented</p>
+              </div>
+            </div>
+            <div class="col">
+              <img src="./assets/img/18.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="./assets/img/13.jpg" class="img-fluid" />
+            </div>
+            <div class="col align-items-start">
+              <div class="d-flex flex-column align-items-center pl-5 ml-5">
+                <p class="counter bold display-4 mb-0" data-bg-text="70+">70+</p>
+                <p>Startups coached so far</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section class="news">
+        <div class="overlay"></div>
+        <img src="./assets/img/19.jpg" />
+        <div class="container py-5 my-4">
+          <div class="d-flex flex-column align-items-center">
+            <h1 class="display-4 bold text-white mx-4 mb-5">
+              <span class="underline">News & insight</span>
+            </h1>
+            <div class="d-flex justify-content-center">
+              <div
+                id="multi-item-carousel"
+                class="
+                  carousel
+                  slide
+                  carousel-multi-item
+                  d-flex
+                  align-items-center
+                "
+                data-ride="carousel"
+              >
+                <a
+                  class="btn-floating"
+                  href="#multi-item-carousel"
+                  data-slide="prev"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="white"
+                    transform="rotate(90), scale(1.5)"
+                    class="mr-3"
+                  >
+                    <path
+                      d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"
+                    /></svg
+                ></a>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="row px-3">
+                      <div class="col-md-4">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more<svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row px-3">
+                      <div class="col-md-4">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card p-4">
+                          <p class="bold mb-0">
+                            Donec sit amet diam venenatis, ultrices nulla ut
+                          </p>
+                          <p class="text-muted mb-5">9 jan. 2020</p>
+                          <a href="#"
+                            >Read more
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                              /></svg
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="btn-floating"
+                  href="#multi-item-carousel"
+                  data-slide="next"
+                  ><svg
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="white"
+                    transform="rotate(270), scale(1.5)"
+                    class="ml-3"
+                  >
+                    <path
+                      d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+            <button class="btn-custom text-uppercase mt-5">
+              View full agenda
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="dark_bg">
+      <div class="container py-4">
+        <div class="row justify-content-center py-4">
+          <div class="col-3">
+            <h3 class="bold mb-4">Luxembourg<br />Startup</h3>
+            <p class="mb-0">Street Adress</p>
+            <p class="mb-0">City, ST 00000</p>
+            <p class="mb-0">Call us: 1-800-COMPANY</p>
+            <div class="social d-flex flex-nowrap mt-5">
+              <a href="#" target="_blank" title="facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" title="linkedin">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" title="twitter">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <path
+                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-3 mb-4 mr-4">
+            <h5 class="mb-3">Company</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-0"><a href="#">About the ecosystem</a></li>
+              <li class="mb-0"><a href="#">Your startup journey</a></li>
+              <li class="mb-0"><a href="#">The ecosystem at a glance</a></li>
+              <li class="mb-0"><a href="#">News & insight</a></li>
+            </ul>
+          </div>
+
+          <div class="col-4">
+            <h3 class="mb-4">Drop us a line</h3>
+            <form>
+              <div class="form-row mb-2">
+                <div class="col mr-2">
+                  <label for="inputName">First & last name</label>
+                  <input type="text" class="form-control" id="inputName" />
+                </div>
+                <div class="col ml-2">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" />
+                </div>
+              </div>
+              <div class="form-row mb-3">
+                <div class="col">
+                  <label for="inputMsg">Your message</label>
+                  <textarea
+                    class="form-control"
+                    id="inputMsg"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-custom blue_btn text-uppercase">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
+
+      <div class="light_bg py-2">
+        <div class="container">
+          <p class="mb-0 ml-5 py-2">
+            Copyright © 2019 Company, Inc. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
+      integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

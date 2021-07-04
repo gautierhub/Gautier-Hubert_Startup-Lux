@@ -1,0 +1,52 @@
+// main titles, text, social icons 
+$primary_white: #FFFFFF;
+$primary_black: #252627;
+$primary_light: #0ACCB2;
+$primary_blue: #008AE6;
+$primary_dark_blue: #001954;
+
+// pour les nb en arrière plan
+$secondary_gray: #F3F3F3;
+
+// backgrounds 
+$dark_bg: #252728;
+$light_bg: #3A3C3D;
+
+// colors
+.primary_light {
+    color: $primary_light !important;
+}
+
+.primary_dark_blue {
+    color: $primary_dark_blue !important;
+}
+
+.dark_bg {
+    background-color: $dark_bg;
+    color: white;
+}
+
+.light_bg {
+    background-color: $light_bg;
+    color: white;
+}
+
+.dark_blue_bg {
+    background-color: $primary_dark_blue;
+    color: white;
+}
+
+.blue_btn {
+    background-color: $primary_blue !important;
+    color: white !important;
+    border: none !important;
+    
+    &:hover {
+        color: $primary_blue !important;
+        background-color: white !important;
+    }
+}
+
+.o-06 {
+    opacity: 0.6;
+}
