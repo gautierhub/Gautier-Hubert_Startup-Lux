@@ -1,3 +1,5 @@
+// counter script - gsap animated numbers
+
 const items = document.querySelectorAll(".counter");
 
 gsap.from(items, {
@@ -13,6 +15,8 @@ gsap.from(items, {
   },
 });
 
+// navbar script - gsap animated numbers
+
 $(function () {
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 10) {
@@ -22,6 +26,8 @@ $(function () {
     }
   });
 });
+
+// journey script - carousel
 
 let navLinks = document.querySelectorAll(".carousel .nav-link");
 let slides = document.querySelectorAll(".carousel .slides");

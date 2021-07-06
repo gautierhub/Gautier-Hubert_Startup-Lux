@@ -19,6 +19,7 @@ a {
 
 .card {
     box-shadow: 0px 12px 36px #0000005C;
+
     & a {
         color: $primary_blue;
     }
@@ -28,6 +29,10 @@ a {
         height: 10px;
         width: 10px;
     }
+}
+
+.o-06 {
+    opacity: 0.6;
 }
 
 /*  ----------------------------- underline text -----------------------------  */
@@ -66,6 +71,12 @@ a {
     width: 100%;
     overflow: hidden;
 
+    & h1 {
+        @include rwd(575) {
+            padding: 1rem 0;
+        }
+    }
+
     & img {
         width: 300px;
     }
@@ -88,6 +99,12 @@ a {
     & .container {
         position: relative;
         z-index: 2;
+
+        & .d-flex {
+            @include rwd(575) {
+                padding-top: 40%;
+            }
+        }
     }
 
     & .overlay {
@@ -108,16 +125,34 @@ a {
 section.journey {
     background: transparent linear-gradient(141deg, #008AE5 0%, #032D93 100%) 0% 0% no-repeat padding-box;
     padding: 10% 15%;
-    z-index: 2;
+    z-index: 3;
 
     & .cards {
         position: relative;
         top: -140px;
         z-index: 3;
 
+        @include rwd(767) {
+            flex-direction: column;
+            padding: 3rem 0;
+        }
+
         & .card {
             width: 30vw;
             height: 200px;
+
+            @include rwd(991) {
+                height: 250px;
+            }
+
+            @include rwd(767) {
+                width: 100%;
+                height: fit-content;
+
+                &:nth-child(1) {
+                    margin-bottom: 1rem;
+                }
+            }
 
             & a>svg {
                 fill: $primary_light;
@@ -132,8 +167,18 @@ section.journey {
 
         .more-news {
             position: absolute;
+            display: block;
             right: -5vw;
             bottom: 20px;
+
+            @include rwd(1199) {
+                right: -10vw;
+            }
+
+            @include rwd(767) {
+                right: 45%;
+                bottom: 0;
+            }
         }
     }
 }
@@ -144,6 +189,7 @@ section.journey {
         color: white;
         position: relative;
         display: flex;
+        z-index: 3;
 
         & .nav-links {
             & .nav-link {
@@ -212,76 +258,49 @@ section.journey {
     }
 }
 
-/*
-.carousel {
-    position: relative;
-    display: flex;
-
-    .slides {
-        position: relative;
-        top: -4em;
-        left: 10em;
-
-        img {
-            position: absolute;
-            width: 450px;
-            height: 450px;
-            opacity: 0;
-            z-index: 9999;
-
-            &.active {
-                opacity: 1;
-            }
-        }
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0 0 0 6em;
-        list-style-type: none;
-
-        .nav-link {
-            font-size: 2rem;
-            font-family: Lora, serif;
-            line-height: 2;
-            text-decoration: none;
-            color: #7f8c8d;
-            transition: 0.3s;
-
-            &:hover {
-                color: #1c1e1f;
-            }
-
-            &.active {
-                color: black;
-                pointer-events: none;
-            }
-        }
-    }
-}
-*/
-
 /*  ============================= SECTION N°3 : The ecosystem at a glance =============================  */
 
 .wrap-bg {
+    display: inline-block;
+    overflow: hidden;
     position: absolute;
+    z-index: 0;
     top: 200%;
     max-width: 100vw;
 
     & img {
-        object-fit: cover;
-        max-height: 100%;
-        width: 100%;
+        object-fit: contain;
+        max-height: 1000px;
+        max-width: 100%;
     }
 }
 
 .ecosystem {
+    & .d-flex {
+        @include rwd(575) {
+            margin-bottom: 1rem !important;
+        }
+    }
+
     & .subtitle {
         font-size: 30px;
+        padding: 0 2rem;
+
+        @include rwd(767) {
+            text-align: center;
+            padding-top: 1rem;
+        }
+    }
+
+    & .row {
+        @include rwd(575) {
+            flex-direction: column;
+            padding: 1rem 2rem;
+
+            &:nth-child(3) {
+                flex-direction: column-reverse !important;
+            }
+        }
     }
 
     & .col {
@@ -291,7 +310,7 @@ section.journey {
         height: 350px;
         margin: 1rem 0;
 
-        & .d-flex:last-child{
+        & .d-flex:last-child {
             font-size: 1.5rem;
         }
 
@@ -318,7 +337,6 @@ section.journey {
             top: -30px;
             left: 100px;
         }
-
     }
 
     & img {
@@ -337,6 +355,12 @@ section.journey {
     height: auto;
     width: 100%;
     overflow: hidden;
+
+    & h2 {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+
+    }
 
     & img {
         position: absolute;
