@@ -154,6 +154,7 @@
               text-center
               justify-content-center
               align-items-center
+              gs_reveal
             "
           >
             <div class="w-100 text-white">
@@ -189,7 +190,7 @@
       </section>
 
         <section class="journey container-fluid py-5" id="journey">
-          <div class="cards d-flex justify-content-center align-items-end mb-5">
+          <div class="cards gs_reveal gs_reveal_delay d-flex justify-content-center align-items-end mb-5">
             <div class="card d-flex dark_blue_bg p-4">
               <p class="bold mb-0">
                 How to optimise your online application process for ICT or Space
@@ -252,14 +253,14 @@
 
           <div class="cards-after">
             <h2
-              class="primary_dark_blue o-06 bold text-uppercase display-4 mb-0"
+              class="primary_dark_blue o-06 bold text-uppercase display-4 mb-0 gs_reveal"
             >
               Where does
             </h2>
-            <h2 class="primary_dark_blue o-06 bold text-uppercase display-3">
+            <h2 class="primary_dark_blue o-06 bold text-uppercase display-3 gs_reveal">
               your business stand ?
             </h2>
-            <div class="d-flex carousel justify-content-between align-items-center">
+            <div class="d-flex carousel justify-content-between align-items-center gs_reveal">
               <div class="nav-links d-flex flex-column">
                 <div class="nav-link d-flex">
                   <p class="number bold">1</p>
@@ -342,41 +343,41 @@
 
         <section class="ecosystem container-fluid px-0 py-5 mb-5">
           <div class="d-flex flex-column align-items-center mt-2 mb-5">
-            <h2 class="display-4 bold">
+            <h2 class="display-4 bold gs_reveal">
               <span class="underline">Luxembourg</span>
             </h2>
-            <p class="subtitle">A vibrant and active ecosystem for start-ups</p>
+            <p class="subtitle gs_reveal">A vibrant and active ecosystem for start-ups</p>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col gs_reveal gs_reveal_fromLeft">
               <img src="./assets/img/10.jpg" />
             </div>
             <div class="col align-items-start">
               <div class="d-flex flex-column align-items-center pl-5 ml-5">
-                <p class="counter bold display-4 mb-0" data-bg-text="2500+">2500+</p>
-                <p>Participants in each edition</p>
+                <p class="gs_reveal gs_reveal_counter bold display-4 mb-0">2500+</p>
+                <p class="counter-text" data-bg-text="2500+">Participants in each edition</p>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row ">
             <div class="col align-items-end">
               <div class="d-flex flex-column align-items-center pr-5 mr-5">
-                <p class="counter left bold display-4 mb-0" data-bg-text="60+">60+</p>
-                <p>Countries represented</p>
+                <p class="gs_reveal gs_reveal_counter left bold display-4 mb-0">60+</p>
+                <p class="counter-text" data-bg-text="60+">Countries represented</p>
               </div>
             </div>
-            <div class="col">
+            <div class="col gs_reveal gs_reveal_fromRight">
               <img src="./assets/img/18.jpg" class="img-fluid" />
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col gs_reveal gs_reveal_fromLeft">
               <img src="./assets/img/13.jpg" class="img-fluid" />
             </div>
             <div class="col align-items-start">
               <div class="d-flex flex-column align-items-center pl-5 ml-5">
-                <p class="counter bold display-4 mb-0" data-bg-text="70+">70+</p>
-                <p>Startups coached so far</p>
+                <p class="gs_reveal gs_reveal_counter bold display-4 mb-0">70+</p>
+                <p class="counter-text" data-bg-text="70+">Startups coached so far</p>
               </div>
             </div>
           </div>
@@ -387,10 +388,10 @@
         <img src="./assets/img/19.jpg" />
         <div class="container py-5 my-4">
           <div class="d-flex flex-column align-items-center">
-            <h2 class="display-4 bold text-white mx-4 mb-5">
+            <h2 class="display-4 bold text-white mx-4 mb-5 gs_reveal">
               <span class="underline">News & insight</span>
             </h2>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center gs_reveal">
               <div
                 id="multi-item-carousel"
                 class="
@@ -566,7 +567,7 @@
                     /></svg></a>
               </div>
             </div>
-            <button class="btn-custom text-uppercase mt-5">
+            <button class="btn-custom text-uppercase mt-5 gs_reveal">
               View full agenda
             </button>
           </div>
@@ -682,6 +683,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
