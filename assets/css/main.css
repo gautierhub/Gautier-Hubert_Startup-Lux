@@ -239,9 +239,16 @@ a:hover {
   z-index: 2;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+  .about .container {
+    height: auto;
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 767px) {
   .about .container .d-flex {
-    padding-top: 40%;
+    padding-top: 3 0%;
   }
 }
 
@@ -342,6 +349,24 @@ section.journey .cards .more-news {
   z-index: 3;
 }
 
+@media (max-width: 767px) {
+  .cards-after .carousel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .cards-after .carousel .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .cards-after .carousel .nav-links .nav-link {
   margin-top: 3rem;
 }
@@ -387,22 +412,34 @@ section.journey .cards .more-news {
 }
 
 .cards-after .carousel .slides {
-  opacity: 0;
-  position: relative;
+  padding-top: 4rem;
 }
 
-.cards-after .carousel .slides.active {
+@media (max-width: 767px) {
+  .cards-after .carousel .slides {
+    height: 70vh;
+    margin-top: 2rem;
+  }
+}
+
+.cards-after .carousel .slides .slide {
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+}
+
+.cards-after .carousel .slides .slide.active {
   opacity: 1;
 }
 
-.cards-after .carousel .slides .img {
+.cards-after .carousel .slides .slide .img {
   position: relative;
-  height: 250px;
-  width: 250px;
+  height: 220px;
+  width: 220px;
   overflow: hidden;
 }
 
-.cards-after .carousel .slides .img img {
+.cards-after .carousel .slides .slide .img img {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -413,23 +450,17 @@ section.journey .cards .more-news {
 }
 
 /*  ============================= SECTION N°3 : The ecosystem at a glance =============================  */
-.wrap-bg {
-  display: inline-block;
-  overflow: hidden;
-  position: absolute;
-  z-index: 0;
-  top: 200%;
-  max-width: 100vw;
+.ecosystem {
+  background-image: url(../img/nation-branding-up.png), url(../img/nation-branding-down.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto 50%, auto 50%;
+  background-position: 0% 0%, 0% 100%;
+  min-height: 100%;
+  margin-top: -17rem;
+  padding-top: 20rem !important;
 }
 
-.wrap-bg img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-height: 1000px;
-  max-width: 100%;
-}
-
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .ecosystem .d-flex {
     margin-bottom: 1rem !important;
   }
@@ -447,7 +478,7 @@ section.journey .cards .more-news {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .ecosystem .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -476,6 +507,19 @@ section.journey .cards .more-news {
           justify-content: center;
   height: 350px;
   margin: 1rem 0;
+}
+
+@media (max-width: 767px) {
+  .ecosystem .col {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    margin-top: 0;
+  }
+  .ecosystem .col .d-flex {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
 
 .ecosystem .col .d-flex:last-child {
@@ -565,6 +609,16 @@ footer .social svg {
   height: 40px;
   width: 40px;
   margin-right: 15px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+footer .social svg:hover {
+  fill: #008AE6 !important;
+}
+
+footer a:hover {
+  color: #008AE6;
 }
 
 @media (max-width: 767px) {

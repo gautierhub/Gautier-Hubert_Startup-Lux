@@ -49,7 +49,7 @@ function animateFrom(elem, direction) {
       x: 0,
       y: 0,
       autoAlpha: 1,
-      ease: "expo",
+      ease: "power3",
       overwrite: "auto",
     }
   );
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ScrollTrigger.create({
       trigger: elem,
+      start: "top 75%",
       onEnter: function () {
         animateFrom(elem);
       },
@@ -78,25 +79,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // journey script - carousel
 
 let navLinks = document.querySelectorAll(".carousel .nav-link");
-let slides = document.querySelectorAll(".carousel .slides");
-let desc = document.querySelectorAll(".text-desc");
+let slides = document.querySelectorAll(".carousel .slide");
 let maxZIndex = navLinks.length;
 let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
 slides[0].classList.add("active");
 navLinks[0].classList.add("active");
 navLinks.forEach((navLink, activeIndex) => {
-  navLink.addEventListener("mouseover", () => {
-    // nav-link
+  navLink.addEventListener("mouseenter", () => {
     navLinks.forEach((navLink) => navLink.classList.remove("active"));
-    navLinks.forEach((navLink) => navLink.classList.remove("underline"));
     navLink.classList.add("active");
-    navLink.classList.add("underline");
-    // slide
-    let currentSlide = document.querySelector(".carousel .slides.active");
+    let currentSlide = document.querySelector(".carousel .slide.active");
     let slideFadeOut = currentSlide.animate(
       [
-        { transform: "translateY(0)", opacity: 1 },
-        { transform: "translateY(5%)", opacity: 0 },
+        { transform: "translateY(5%)", opacity: 1 },
+        { transform: "translateY(0)", opacity: 0 },
       ],
       {
         duration: 600,
@@ -106,16 +102,17 @@ navLinks.forEach((navLink, activeIndex) => {
     );
     slideFadeOut.onfinish = () => {
       slides.forEach((slide) => slide.classList.remove("active"));
+
       let activeSlide = slides[activeIndex];
       activeSlide.classList.add("active");
       activeSlide.animate(
         [
           {
-            transform: "translateY(0%)",
+            transform: "translateY(-5%)",
             opacity: 0,
           },
           {
-            transform: "translateY(-10%)",
+            transform: "translateY(0)",
             opacity: 1,
           },
         ],
